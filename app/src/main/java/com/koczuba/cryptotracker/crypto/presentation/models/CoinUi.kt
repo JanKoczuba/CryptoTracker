@@ -3,8 +3,8 @@ package com.koczuba.cryptotracker.crypto.presentation.models
 
 import android.icu.text.NumberFormat
 import androidx.annotation.DrawableRes
+import com.koczuba.cryptotracker.core.presentation.util.getDrawableIdForCoin
 import com.koczuba.cryptotracker.crypto.domain.Coin
-import com.koczuba.cryptotracker.utils.getDrawableIdForCoin
 import java.util.Locale
 
 data class CoinUi(
