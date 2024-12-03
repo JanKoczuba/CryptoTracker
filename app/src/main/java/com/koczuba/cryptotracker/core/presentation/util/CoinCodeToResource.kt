@@ -1,4 +1,4 @@
-package com.koczuba.cryptotracker.utils
+package com.koczuba.cryptotracker.core.presentation.util
 
 import com.koczuba.cryptotracker.R
 
