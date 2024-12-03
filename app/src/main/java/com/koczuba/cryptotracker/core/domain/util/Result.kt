@@ -1,4 +1,4 @@
-package com.koczuba.cryptotracker.utils
+package com.koczuba.cryptotracker.core.domain.util
 
 
 typealias DomainError = Error
