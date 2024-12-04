@@ -18,6 +18,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import com.koczuba.cryptotracker.core.presentation.util.ObserveAsEvents
 import com.koczuba.cryptotracker.core.presentation.util.toString
+import com.koczuba.cryptotracker.crypto.presentation.coin_details.CoinDetailsScreen
 import com.koczuba.cryptotracker.crypto.presentation.coin_list.CoinListEvent
 
 
@@ -42,10 +43,22 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                     }
-                    CoinListScreen(
-                        state = state,
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    when {
+                        state.selectedCoin != null -> {
+                            CoinDetailsScreen(
+                                state = state,
+                                modifier = Modifier.padding(innerPadding)
+                            )
+                        }
+
+                        else ->
+                            CoinListScreen(
+                                state = state,
+                                onAction = viewModel::onAction,
+                                modifier = Modifier.padding(innerPadding)
+                            )
+                    }
+
                 }
             }
         }
