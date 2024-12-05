@@ -5,6 +5,7 @@ import android.icu.text.NumberFormat
 import androidx.annotation.DrawableRes
 import com.koczuba.cryptotracker.core.presentation.util.getDrawableIdForCoin
 import com.koczuba.cryptotracker.crypto.domain.Coin
+import com.koczuba.cryptotracker.crypto.presentation.coin_details.DataPoint
 import java.util.Locale
 
 data class CoinUi(
@@ -16,6 +17,7 @@ data class CoinUi(
     val priceUsd: DisplayableNumber,
     val changePercent24Hr: DisplayableNumber,
     @DrawableRes val iconRes: Int,
+    val coinPriceHistory: List<DataPoint> = emptyList()
 )
 
 data class DisplayableNumber(
